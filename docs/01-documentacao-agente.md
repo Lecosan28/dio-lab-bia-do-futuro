@@ -91,7 +91,7 @@ As respostas devem ser estruturadas, utilizando listas, tabelas e exemplos numé
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
+    A[Usuário] -->|Mensagem| B[Interface]
     B --> C[LLM]
     C --> D[Base de Conhecimento]
     D --> C
