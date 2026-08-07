@@ -76,7 +76,7 @@ O agente deve evitar uma comunicação excessivamente formal ou complexa, manten
 As respostas devem ser estruturadas, utilizando listas, tabelas e exemplos numéricos quando isso facilitar a compreensão.
 
 ### Exemplos de Linguagem
-- Saudação: "Olá! Eu sou o FinPlan AI. Posso ajudar você a organizar suas finanças, construir sua reserva de emergência ou planejar uma meta financeira. Por onde começamos?"
+- Saudação: "Olá! Eu sou o SmartFinance AI. Posso ajudar você a organizar suas finanças, construir sua reserva de emergência ou planejar uma meta financeira. Por onde começamos?"
 - Confirmação: "Entendi! Você quer alcançar essa meta em 24 meses. Vou analisar o valor necessário, sua capacidade de aporte e a reserva de emergência antes de montar uma estratégia."
 - Sugestão proativa: "Antes de direcionarmos todo o seu dinheiro para essa meta, há um ponto importante: sua reserva de emergência ainda está abaixo do valor planejado. Podemos ajustar a estratégia para cuidar primeiro da sua segurança financeira."
 - Explicação: "O CDI é uma taxa de referência muito utilizada no mercado de renda fixa. Quando um CDB oferece 100% do CDI, significa que sua rentabilidade acompanha essa referência, respeitando as condições do produto."
@@ -91,12 +91,24 @@ As respostas devem ser estruturadas, utilizando listas, tabelas e exemplos numé
 
 ```mermaid
 flowchart TD
-    A[Usuário] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    A[Usuário] -->|Dados e objetivo financeiro| B[Interface]
+    B --> C[Agente SmartFinance AI]
+
+    C --> D[Contexto Financeiro do Usuário]
+    C --> E[LLM / IA Generativa]
+    C --> F[Base de Conhecimento Financeiro]
+
+    D --> E
+    F --> E
+
+    E --> G[Motor de Planejamento]
+    G --> H{Validação e Segurança}
+
+    H -->|Resposta confiável| I[Resposta Personalizada]
+    H -->|Informação insuficiente| J[Solicitar mais dados]
+
+    I --> B
+    J --> B
 ```
 
 ### Componentes
