@@ -115,10 +115,12 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | [Streamlit](https://streamlit.io/) – Interface web para interação com o usuário. |
+| LLM | Ollama (local) – Modelo de IA responsável por interpretar solicitações e gerar respostas personalizadas. |
+| Contexto do Usuário | Dados fornecidos pelo usuário, como renda, despesas, reserva atual e metas financeiras. |
+| Base de Conhecimento | JSON/CSV mockados na pasta "data" |
+| Validação | Verifica consistência das respostas, solicita mais informações quando necessário e reduz riscos de alucinação. |
+| Resposta Personalizada | Apresenta recomendações, explicações e planos financeiros adaptados ao contexto do usuário. |
 
 ---
 
@@ -126,12 +128,62 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+* [x] O agente responde com base apenas nas informações fornecidas pelo usuário e na base de conhecimento disponível.
+* [x] O agente solicita dados adicionais quando não possui informações suficientes para realizar uma análise confiável.
+* [x] O agente informa claramente quando não sabe uma resposta ou quando os dados disponíveis são insuficientes.
+* [x] O agente explica os critérios utilizados para gerar suas recomendações e cálculos.
+* [x] O agente evita apresentar estimativas ou projeções como garantias de resultado.
+* [x] O agente não realiza recomendações personalizadas de investimento sem informações adequadas sobre objetivos, prazo e tolerância a risco do usuário.
+* [x] O agente prioriza a educação financeira, explicando conceitos antes de sugerir ações.
+* [x] O agente utiliza informações provenientes de fontes financeiras confiáveis presentes na base de conhecimento do sistema.
+* [x] O agente recomenda que decisões financeiras relevantes sejam validadas por profissionais habilitados quando necessário.
+
+### Regras de Segurança
+
+1. O agente não promete rentabilidade futura nem garante ganhos financeiros.
+2. O agente não incentiva operações especulativas ou investimentos incompatíveis com o perfil informado pelo usuário.
+3. O agente não inventa taxas, rentabilidades ou dados de mercado que não estejam disponíveis em sua base de conhecimento.
+4. Quando identificar informações insuficientes, o agente interrompe a análise e solicita esclarecimentos adicionais.
+5. O agente diferencia claramente fatos, cálculos e estimativas, informando ao usuário quando uma projeção é apenas uma simulação.
+6. O agente mantém linguagem educativa e transparente durante toda a interação.
+
+### Exemplo de Comportamento Seguro
+
+**Usuário:** "Qual investimento vai me dar o maior lucro em 12 meses?"
+
+**Resposta do Agente:**
+
+"Não posso afirmar qual investimento terá o maior retorno futuro, pois a rentabilidade depende das condições do mercado e envolve riscos. Se você informar seu objetivo, prazo, valor disponível e tolerância a risco, posso apresentar alternativas adequadas e explicar suas características para ajudar na decisão."
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+### Limitações Declaradas
+
+O SmartFinance AI foi desenvolvido para auxiliar no planejamento financeiro pessoal e na educação financeira. Portanto, ele possui as seguintes limitações:
+
+* Não realiza consultoria financeira profissional ou regulamentada.
+* Não substitui a orientação de planejadores financeiros, consultores de investimentos ou outros profissionais especializados.
+* Não garante rentabilidade, ganhos financeiros ou resultados futuros.
+* Não prevê o comportamento do mercado financeiro.
+* Não realiza operações bancárias, transferências, pagamentos ou movimentações financeiras.
+* Não acessa contas bancárias, corretoras ou dados financeiros reais do usuário.
+* Não recomenda investimentos personalizados sem informações suficientes sobre objetivos, prazo e perfil de risco.
+* Não considera aspectos tributários, jurídicos ou patrimoniais complexos.
+* Não fornece aconselhamento sobre ações, criptomoedas, derivativos ou produtos financeiros de alto risco.
+* Não utiliza dados de mercado em tempo real.
+* Não substitui a leitura dos documentos oficiais dos produtos financeiros mencionados.
+* Não toma decisões financeiras em nome do usuário; todas as decisões permanecem sob responsabilidade do próprio usuário.
+
+### Escopo do Agente
+
+O SmartFinance AI é destinado a:
+
+* Auxiliar na construção de reservas de emergência;
+* Apoiar o planejamento de metas financeiras;
+* Explicar conceitos básicos de educação financeira;
+* Simular cenários de economia e investimento conservador;
+* Incentivar decisões financeiras mais conscientes e planejadas.
+
+Qualquer funcionalidade fora desse escopo deverá ser considerada fora das capacidades atuais do agente.
+
