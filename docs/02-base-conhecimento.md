@@ -14,7 +14,7 @@
 
 ## Objetivo da Base de Conhecimento
 
-A base de conhecimento fornece informações estruturadas para que o FinPlan AI gere respostas mais consistentes, personalizadas e seguras.
+A base de conhecimento fornece informações estruturadas para que o SmartFinance AI gere respostas mais consistentes, personalizadas e seguras.
 
 Os dados são utilizados para:
 
@@ -47,7 +47,7 @@ As informações financeiras utilizadas seguem conceitos amplamente difundidos e
 * Juros compostos;
 * Diversificação básica de investimentos.
 
-Os dados não representam recomendações financeiras reais, não possuem atualização em tempo real e são utilizados exclusivamente para fins acadêmicos e demonstração do projeto FinPlan AI.
+Os dados não representam recomendações financeiras reais, não possuem atualização em tempo real e são utilizados exclusivamente para fins acadêmicos e demonstração do projeto SmartFinance AI.
 
 ---
 
