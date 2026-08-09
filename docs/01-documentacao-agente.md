@@ -118,7 +118,7 @@ flowchart TD
 | Interface | [Streamlit](https://streamlit.io/) – Interface web para interação com o usuário. |
 | LLM | Ollama (local) – Modelo de IA responsável por interpretar solicitações e gerar respostas personalizadas. |
 | Contexto do Usuário | Dados fornecidos pelo usuário, como renda, despesas, reserva atual e metas financeiras. |
-| Base de Conhecimento | JSON/CSV mockados na pasta "data" |
+| Base de Conhecimento | JSON/CSV mockados na pasta `data` |
 | Validação | Verifica consistência das respostas, solicita mais informações quando necessário e reduz riscos de alucinação. |
 | Resposta Personalizada | Apresenta recomendações, explicações e planos financeiros adaptados ao contexto do usuário. |
 
