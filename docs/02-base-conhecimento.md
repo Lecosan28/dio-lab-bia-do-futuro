@@ -53,38 +53,94 @@ Os dados não representam recomendações financeiras reais, não possuem atuali
 
 ## Adaptações nos Dados
 
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
+A base de conhecimento original foi expandida para representar cenários mais próximos de situações reais de planejamento financeiro.
 
-[Sua descrição aqui]
+As principais adaptações realizadas foram:
+
+* Criação de múltiplos perfis de usuários com diferentes profissões, níveis de renda e perfis de risco;
+* Inclusão de diversas metas financeiras, como reserva de emergência, compra de notebook, moto, viagem, pós-graduação e entrada de imóvel;
+* Estruturação de uma base de produtos financeiros com informações sobre perfil recomendado, liquidez e objetivo de uso;
+* Ampliação da base de conceitos financeiros para apoiar explicações educativas durante as interações;
+* Criação de regras específicas para cálculo da reserva de emergência conforme a situação profissional do usuário;
+* Inclusão de históricos de planejamento financeiro para permitir simulações e análises comparativas;
+* Inclusão de registros de gastos categorizados para identificação de padrões de consumo e oportunidades de economia.
+
+Essas adaptações tornam o agente mais capaz de gerar respostas personalizadas, contextualizadas e alinhadas aos objetivos financeiros dos usuários.
 
 ---
 
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos JSON e CSV localizados na pasta `data/` são carregados no início da execução do agente.
+
+Os dados são convertidos para estruturas de dados internas (listas e dicionários) e permanecem disponíveis durante toda a sessão. Dessa forma, o agente pode consultar informações sobre perfis financeiros, metas, produtos financeiros, conceitos financeiros, regras de reserva de emergência e históricos de planejamento sempre que necessário.
 
 ### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados são utilizados de duas formas:
+
+1. **Contexto fixo (System Prompt):**
+
+   * Regras de negócio;
+   * Regras de segurança;
+   * Conceitos financeiros básicos;
+   * Limitações do agente.
+
+2. **Contexto dinâmico:**
+
+   * Perfil do usuário;
+   * Objetivos financeiros;
+   * Gastos informados;
+   * Histórico de planejamento;
+   * Produtos financeiros compatíveis com o perfil.
+
+Antes de gerar uma resposta, o agente seleciona apenas as informações mais relevantes para a solicitação atual e as inclui no contexto enviado ao modelo de IA.
+
+Essa estratégia reduz o volume de informações processadas e melhora a qualidade das respostas.
 
 ---
 
 ## Exemplo de Contexto Montado
 
-> Mostre um exemplo de como os dados são formatados para o agente.
+> Exemplo de contexto enviado ao agente antes da geração da resposta.
 
-```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+```text
+Perfil do Usuário
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+- Profissão: Desenvolvedor Júnior
+- Idade: 24 anos
+- Perfil de Risco: Moderado
+- Renda Mensal: R$ 4.500
+- Despesas Mensais: R$ 2.800
+
+Objetivo Financeiro
+
+- Meta: Comprar um notebook
+- Valor da Meta: R$ 5.000
+- Prazo: 12 meses
+
+Regras de Reserva de Emergência
+
+- Reserva recomendada: 6 meses de despesas
+- Valor recomendado: R$ 16.800
+
+Produtos Compatíveis
+
+- Tesouro Selic
+- CDB com Liquidez Diária
+- LCI/LCA
+
+Conceitos Relevantes
+
+- Liquidez: facilidade de converter um investimento em dinheiro.
+- Reserva de Emergência: valor destinado a imprevistos financeiros.
+
+Instruções ao Agente
+
+- Priorizar educação financeira.
+- Não prometer rentabilidade.
+- Não realizar recomendações sem contexto suficiente.
+- Solicitar mais informações quando necessário.
 ```
