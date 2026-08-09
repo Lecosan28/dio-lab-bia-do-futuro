@@ -1,0 +1,34 @@
+{
+  "produtos": [
+    {
+      "nome": "Tesouro Selic",
+      "perfil": "Conservador",
+      "liquidez": "Alta",
+      "objetivo": "Reserva de emergência"
+    },
+    {
+      "nome": "CDB Liquidez Diária",
+      "perfil": "Conservador",
+      "liquidez": "Alta",
+      "objetivo": "Curto prazo"
+    },
+    {
+      "nome": "Tesouro IPCA+",
+      "perfil": "Moderado",
+      "liquidez": "Média",
+      "objetivo": "Longo prazo"
+    },
+    {
+      "nome": "LCI/LCA",
+      "perfil": "Conservador",
+      "liquidez": "Baixa",
+      "objetivo": "Médio prazo"
+    },
+    {
+      "nome": "Fundo Imobiliário",
+      "perfil": "Moderado",
+      "liquidez": "Alta",
+      "objetivo": "Renda passiva"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "idade": 54,
+      "profissao": "Servidor Público",
+      "renda_mensal": 7000,
+      "despesas_mensais": 5344,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 2,
+      "idade": 29,
+      "profissao": "Estudante",
+      "renda_mensal": 2500,
+      "despesas_mensais": 1974,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 3,
+      "idade": 56,
+      "profissao": "Professor",
+      "renda_mensal": 5500,
+      "despesas_mensais": 4020,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 4,
+      "idade": 18,
+      "profissao": "Empreendedor",
+      "renda_mensal": 9000,
+      "despesas_mensais": 6748,
+      "perfil_risco": "Arrojado"
+    },
+    {
+      "id": 5,
+      "idade": 40,
+      "profissao": "Desenvolvedor Júnior",
+      "renda_mensal": 4500,
+      "despesas_mensais": 3582,
+      "perfil_risco": "Moderado"
+    },
+    {
+      "id": 6,
+      "idade": 41,
+      "profissao": "Servidor Público",
+      "renda_mensal": 7000,
+      "despesas_mensais": 4858,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 7,
+      "idade": 55,
+      "profissao": "Desenvolvedor Júnior",
+      "renda_mensal": 4500,
+      "despesas_mensais": 2913,
+      "perfil_risco": "Moderado"
+    },
+    {
+      "id": 8,
+      "idade": 27,
+      "profissao": "Empreendedor",
+      "renda_mensal": 9000,
+      "despesas_mensais": 6162,
+      "perfil_risco": "Arrojado"
+    },
+    {
+      "id": 9,
+      "idade": 27,
+      "profissao": "Desenvolvedor Júnior",
+      "renda_mensal": 4500,
+      "despesas_mensais": 2143,
+      "perfil_risco": "Moderado"
+    },
+    {
+      "id": 10,
+      "idade": 58,
+      "profissao": "Estudante",
+      "renda_mensal": 2500,
+      "despesas_mensais": 1654,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 11,
+      "idade": 52,
+      "profissao": "Servidor Público",
+      "renda_mensal": 7000,
+      "despesas_mensais": 4354,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 12,
+      "idade": 55,
+      "profissao": "Empreendedor",
+      "renda_mensal": 9000,
+      "despesas_mensais": 4776,
+      "perfil_risco": "Arrojado"
+    },
+    {
+      "id": 13,
+      "idade": 24,
+      "profissao": "Autônomo",
+      "renda_mensal": 6000,
+      "despesas_mensais": 4525,
+      "perfil_risco": "Moderado"
+    },
+    {
+      "id": 14,
+      "idade": 34,
+      "profissao": "Servidor Público",
+      "renda_mensal": 7000,
+      "despesas_mensais": 4162,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 15,
+      "idade": 57,
+      "profissao": "Professor",
+      "renda_mensal": 5500,
+      "despesas_mensais": 4240,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 16,
+      "idade": 25,
+      "profissao": "Professor",
+      "renda_mensal": 5500,
+      "despesas_mensais": 3369,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 17,
+      "idade": 58,
+      "profissao": "Autônomo",
+      "renda_mensal": 6000,
+      "despesas_mensais": 3544,
+      "perfil_risco": "Moderado"
+    },
+    {
+      "id": 18,
+      "idade": 34,
+      "profissao": "Estudante",
+      "renda_mensal": 2500,
+      "despesas_mensais": 1378,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 19,
+      "idade": 44,
+      "profissao": "Empreendedor",
+      "renda_mensal": 9000,
+      "despesas_mensais": 6436,
+      "perfil_risco": "Arrojado"
+    },
+    {
+      "id": 20,
+      "idade": 20,
+      "profissao": "Professor",
+      "renda_mensal": 5500,
+      "despesas_mensais": 3074,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 21,
+      "idade": 29,
+      "profissao": "Servidor Público",
+      "renda_mensal": 7000,
+      "despesas_mensais": 4045,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 22,
+      "idade": 40,
+      "profissao": "Autônomo",
+      "renda_mensal": 6000,
+      "despesas_mensais": 3912,
+      "perfil_risco": "Moderado"
+    },
+    {
+      "id": 23,
+      "idade": 55,
+      "profissao": "Empreendedor",
+      "renda_mensal": 9000,
+      "despesas_mensais": 4787,
+      "perfil_risco": "Arrojado"
+    },
+    {
+      "id": 24,
+      "idade": 33,
+      "profissao": "Servidor Público",
+      "renda_mensal": 7000,
+      "despesas_mensais": 4833,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 25,
+      "idade": 37,
+      "profissao": "Empreendedor",
+      "renda_mensal": 9000,
+      "despesas_mensais": 5629,
+      "perfil_risco": "Arrojado"
+    },
+    {
+      "id": 26,
+      "idade": 36,
+      "profissao": "Autônomo",
+      "renda_mensal": 6000,
+      "despesas_mensais": 4187,
+      "perfil_risco": "Moderado"
+    },
+    {
+      "id": 27,
+      "idade": 38,
+      "profissao": "Professor",
+      "renda_mensal": 5500,
+      "despesas_mensais": 3370,
+      "perfil_risco": "Conservador"
+    },
+    {
+      "id": 28,
+      "idade": 49,
+      "profissao": "Autônomo",
+      "renda_mensal": 6000,
+      "despesas_mensais": 3223,
+      "perfil_risco": "Moderado"
+    },
+    {
+      "id": 29,
+      "idade": 45,
+      "profissao": "Empreendedor",
+      "renda_mensal": 9000,
+      "despesas_mensais": 5959,
+      "perfil_risco": "Arrojado"
+    },
+    {
+      "id": 30,
+      "idade": 23,
+      "profissao": "Autônomo",
+      "renda_mensal": 6000,
+      "despesas_mensais": 2703,
+      "perfil_risco": "Moderado"
+    }
+  ]
+}
