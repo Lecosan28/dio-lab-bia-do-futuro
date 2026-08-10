@@ -77,40 +77,69 @@ Os arquivos JSON e CSV localizados na pasta `data/` são carregados no início d
 
 Os dados são convertidos para estruturas de dados internas (listas e dicionários) e permanecem disponíveis durante toda a sessão. Dessa forma, o agente pode consultar informações sobre perfis financeiros, metas, produtos financeiros, conceitos financeiros, regras de reserva de emergência e históricos de planejamento sempre que necessário.
 
+### Exemplo de Carregamento da Base de Conhecimento
+
+```python
+import json
+import pandas as pd
+
+# Arquivos JSON
+
+with open("data/perfil_usuario.json", "r", encoding="utf-8") as f:
+    perfil_usuario = json.load(f)
+
+with open("data/metas_financeiras.json", "r", encoding="utf-8") as f:
+    metas_financeiras = json.load(f)
+
+with open("data/produtos_renda_fixa.json", "r", encoding="utf-8") as f:
+    produtos_renda_fixa = json.load(f)
+
+with open("data/conceitos_financeiros.json", "r", encoding="utf-8") as f:
+    conceitos_financeiros = json.load(f)
+
+with open("data/regras_reserva_emergencia.json", "r", encoding="utf-8") as f:
+    regras_reserva = json.load(f)
+
+# Arquivos CSV
+
+historico_planejamento = pd.read_csv(
+    "data/historico_planejamento.csv"
+)
+
+gastos_mensais = pd.read_csv(
+    "data/gastos_mensais.csv"
+)
+
+print("Base de conhecimento carregada com sucesso!")
+```
+
 ### Como os dados são usados no prompt?
 
-Os dados são utilizados de duas formas:
+Os dados são consultados dinamicamente pelo SmartFinance AI durante a execução.
 
-1. **Contexto fixo (System Prompt):**
+As informações mais relevantes são selecionadas e incorporadas ao contexto enviado ao modelo de IA.
 
-   * Regras de negócio;
-   * Regras de segurança;
-   * Conceitos financeiros básicos;
-   * Limitações do agente.
+Exemplos:
 
-2. **Contexto dinâmico:**
+- Perfil financeiro do usuário;
+- Objetivos financeiros;
+- Gastos mensais;
+- Regras de reserva de emergência;
+- Produtos financeiros compatíveis com o perfil;
+- Conceitos financeiros necessários para responder à pergunta.
 
-   * Perfil do usuário;
-   * Objetivos financeiros;
-   * Gastos informados;
-   * Histórico de planejamento;
-   * Produtos financeiros compatíveis com o perfil.
-
-Antes de gerar uma resposta, o agente seleciona apenas as informações mais relevantes para a solicitação atual e as inclui no contexto enviado ao modelo de IA.
-
-Essa estratégia reduz o volume de informações processadas e melhora a qualidade das respostas.
+Essa abordagem reduz o volume de informações enviadas ao modelo e melhora a qualidade das respostas geradas.
 
 ---
 
 ## Exemplo de Contexto Montado
 
-> Exemplo de contexto enviado ao agente antes da geração da resposta.
-
 ```text
 Perfil do Usuário
 
-- Profissão: Desenvolvedor Júnior
+- Nome: Carlos
 - Idade: 24 anos
+- Profissão: Desenvolvedor Júnior
 - Perfil de Risco: Moderado
 - Renda Mensal: R$ 4.500
 - Despesas Mensais: R$ 2.800
@@ -121,26 +150,20 @@ Objetivo Financeiro
 - Valor da Meta: R$ 5.000
 - Prazo: 12 meses
 
-Regras de Reserva de Emergência
+Reserva de Emergência
 
-- Reserva recomendada: 6 meses de despesas
+- Regra aplicada: 6 meses de despesas
 - Valor recomendado: R$ 16.800
 
 Produtos Compatíveis
 
 - Tesouro Selic
 - CDB com Liquidez Diária
-- LCI/LCA
 
-Conceitos Relevantes
+Instruções do Sistema
 
-- Liquidez: facilidade de converter um investimento em dinheiro.
-- Reserva de Emergência: valor destinado a imprevistos financeiros.
-
-Instruções ao Agente
-
-- Priorizar educação financeira.
 - Não prometer rentabilidade.
-- Não realizar recomendações sem contexto suficiente.
-- Solicitar mais informações quando necessário.
+- Não inventar informações.
+- Priorizar educação financeira.
+- Solicitar mais contexto quando necessário.
 ```
