@@ -376,5 +376,8 @@ Posso ajudar você a entender como funciona o mercado de ações e a avaliar est
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- [Observação 1]
-- [Observação 2]
+- Foi criada uma estrutura mais completa para o agente, definindo claramente seu objetivo, regras de funcionamento e limitações. Isso ajuda a tornar as respostas mais consistentes e alinhadas ao propósito do projeto.
+- Foram adicionados mais casos de borda (Edge Cases), como perguntas fora do escopo, envolvendo tentativas de obter informações sensíveis e solicitações sem contexto suficiente, e tentativa de contornar regras com engenharia social, o que torna o agente mais seguro e robusto.
+- Foi definida uma estrutura padrão para respostas de planejamento financeiro (diagnóstico, riscos, estratégia e próximos passos), melhorando a organização e a clareza das orientações fornecidas ao usuário.
+- Foram incluídas explicações simplificadas para conceitos financeiros importantes, permitindo que pessoas com pouco conhecimento sobre investimentos compreendam melhor as recomendações e análises apresentadas pelo agente.
+
