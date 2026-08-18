@@ -145,15 +145,14 @@ Após a execução dos 20 cenários de teste definidos para o SmartFinance AI, t
 - O agente compreendeu o contexto de conversas anteriores, demonstrando capacidade de continuidade e memória contextual.
 
 **O que pode melhorar:**
-- Ampliar a quantidade de cenários de teste envolvendo diferentes perfis financeiros e situações do mundo real.
-- Incluir testes com valores extremos para validar a robustez dos cálculos financeiros.
 - Avaliar o comportamento do agente em conversas mais longas para verificar a persistência e a qualidade da memória contextual.
 - Expandir a base de conhecimento financeira para contemplar mais exemplos educacionais e explicações avançadas.
-- Fornecer visualizações complementares, como tabelas ou simulações, quando aplicável.
-- Oferecer sugestões mais detalhadas de reorganização orçamentária em metas consideradas inviáveis.
-- Expandir a personalização das respostas com base em diferentes perfis financeiros.
-- Incluir comparações educativas entre produtos financeiros quando houver informações suficientes.
-- Aprimorar a capacidade de detalhar cenários alternativos para atingir metas financeiras de longo prazo.
+- Aplicação das Heurísticas de Usabilidade de Jakob Nielsen para aprimorar a experiência do usuário.
+- Utilização de indicadores visuais para demonstrar o progresso das metas financeiras.
+- Inclusão de gráficos e painéis interativos para facilitar a interpretação dos dados.
+- Redução da carga cognitiva do usuário por meio da organização das informações em cartões, seções e resumos visuais.
+- Implementação de feedback imediato após cálculos e simulações financeiras.
+- Criação de um dashboard financeiro personalizado com indicadores de desempenho e evolução das metas.
 
 ---
 
