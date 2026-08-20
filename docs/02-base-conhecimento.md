@@ -2,40 +2,43 @@
 
 ## Dados Utilizados
 
-| Arquivo                          | Formato | Utilização no Agente                                                                                                                                                  |
-| -------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `perfil_usuario.json`            | JSON    | Armazena perfis de usuários fictícios contendo idade, profissão, renda mensal, despesas mensais e perfil de risco. Permite personalizar as recomendações do agente.   |
-| `metas_financeiras.json`         | JSON    | Contém diferentes objetivos financeiros, como reserva de emergência, notebook, moto, viagem, pós-graduação e entrada de imóvel, com valores e prazos de referência.   |
-| `produtos_renda_fixa.json`       | JSON    | Reúne informações sobre produtos financeiros adequados a diferentes perfis e objetivos, incluindo Tesouro Selic, CDB, LCI/LCA e Fundos Imobiliários.                  |
-| `conceitos_financeiros.json`     | JSON    | Base de conhecimento utilizada para explicar conceitos financeiros como CDI, CDB, Tesouro Selic, liquidez, inflação, rentabilidade, diversificação e juros compostos. |
-| `regras_reserva_emergencia.json` | JSON    | Define regras utilizadas pelo agente para calcular a reserva de emergência recomendada de acordo com a situação profissional do usuário.                              |
-| `historico_planejamento.csv`     | CSV     | Armazena exemplos de planejamentos financeiros realizados, incluindo metas, aportes mensais e prazos, permitindo análises comparativas e simulações.                  |
-| `gastos_mensais.csv`             | CSV     | Contém registros de despesas organizadas por categoria, possibilitando identificar padrões de gastos e oportunidades de economia.                                     |
+| Arquivo | Formato | Utilização no Agente |
+|----------|----------|----------|
+| `conceitos_financeiros.json` | JSON | Base de conhecimento utilizada para explicar conceitos financeiros em linguagem simples, como CDI, CDB, Tesouro Selic, liquidez, inflação, juros compostos, rentabilidade e diversificação. |
+| `metas_financeiras.json` | JSON | Contém exemplos de metas financeiras que auxiliam o agente na elaboração de estratégias de planejamento e educação financeira. |
+| `produtos_renda_fixa.json` | JSON | Reúne informações sobre produtos financeiros de renda fixa, suas características, liquidez, objetivos de uso e riscos associados. |
+| `regras_reserva_emergencia.json` | JSON | Define as regras utilizadas pelo agente para orientar o cálculo da reserva de emergência conforme a situação financeira e profissional do usuário. |
 
-## Objetivo da Base de Conhecimento
+---
 
-A base de conhecimento fornece informações estruturadas para que o SmartFinance AI gere respostas mais consistentes, personalizadas e seguras.
+# Objetivo da Base de Conhecimento
+
+A base de conhecimento fornece informações estruturadas para que o SmartFinance AI gere respostas mais consistentes, educativas e seguras.
 
 Os dados são utilizados para:
 
-* Compreender o perfil financeiro do usuário;
-* Personalizar recomendações de acordo com renda, despesas e perfil de risco;
-* Calcular reservas de emergência;
-* Planejar metas financeiras de curto, médio e longo prazo;
 * Explicar conceitos financeiros em linguagem acessível;
-* Sugerir produtos financeiros compatíveis com os objetivos informados;
-* Identificar oportunidades de economia a partir dos padrões de gastos;
-* Reduzir riscos de respostas incorretas ou sem contexto.
+* Auxiliar no cálculo da reserva de emergência;
+* Apoiar o planejamento de metas financeiras;
+* Apresentar características de produtos financeiros;
+* Orientar usuários iniciantes em educação financeira;
+* Reduzir o risco de respostas incorretas ou inventadas;
+* Fornecer contexto para recomendações educativas.
 
-## Fontes de Informação
+Diferentemente das versões iniciais do projeto, o agente não depende mais de perfis financeiros pré-cadastrados.
 
-A base de conhecimento é composta por dados simulados (mockados) criados exclusivamente para fins educacionais e demonstração do funcionamento do agente.
+Os dados financeiros são informados diretamente pelo usuário durante a utilização da aplicação e armazenados na memória da sessão, permitindo análises personalizadas em tempo real.
 
-As informações financeiras utilizadas seguem conceitos amplamente difundidos em educação financeira e planejamento financeiro pessoal, incluindo:
+---
+
+# Fontes de Informação
+
+A base de conhecimento é composta por dados simulados (mockados), criados exclusivamente para fins educacionais e demonstração do funcionamento do agente.
+
+As informações utilizadas seguem conceitos amplamente difundidos em educação financeira e planejamento financeiro pessoal, incluindo:
 
 * Reserva de emergência;
 * Planejamento financeiro pessoal;
-* Perfil de risco;
 * Renda fixa;
 * Tesouro Selic;
 * CDB;
@@ -51,119 +54,131 @@ Os dados não representam recomendações financeiras reais, não possuem atuali
 
 ---
 
-## Adaptações nos Dados
+# Adaptações Realizadas no Projeto
 
-A base de conhecimento original foi expandida para representar cenários mais próximos de situações reais de planejamento financeiro.
+Durante o desenvolvimento do SmartFinance AI, a estrutura da base de conhecimento foi simplificada para tornar o agente mais flexível e próximo de uma aplicação real.
 
 As principais adaptações realizadas foram:
 
-* Criação de múltiplos perfis de usuários com diferentes profissões, níveis de renda e perfis de risco;
-* Inclusão de diversas metas financeiras, como reserva de emergência, compra de notebook, moto, viagem, pós-graduação e entrada de imóvel;
-* Estruturação de uma base de produtos financeiros com informações sobre perfil recomendado, liquidez e objetivo de uso;
-* Ampliação da base de conceitos financeiros para apoiar explicações educativas durante as interações;
-* Criação de regras específicas para cálculo da reserva de emergência conforme a situação profissional do usuário;
-* Inclusão de históricos de planejamento financeiro para permitir simulações e análises comparativas;
-* Inclusão de registros de gastos categorizados para identificação de padrões de consumo e oportunidades de economia.
+* Remoção do arquivo `perfil_investidor.json`;
+* Remoção do arquivo `historico_atendimento.csv`;
+* Remoção do arquivo `produtos_financeiros.json`;
+* Remoção do arquivo `transacoes.csv`;
+* Criação do arquivo `conceitos_financeiros.json`;
+* Criação do arquivo `metas_financeiras.json`;
+* Criação do arquivo `produtos_renda_fixa.json`;
+* Criação do arquivo `regras_reserva_emergencia.json`;
+* Eliminação da dependência de usuários fictícios pré-cadastrados;
+* Substituição dos perfis simulados por dados informados em tempo real pelo usuário;
+* Implementação de memória de sessão para armazenar informações fornecidas durante a conversa;
+* Foco em educação financeira, planejamento financeiro e reserva de emergência;
+* Utilização exclusiva de bases de conhecimento voltadas para conceitos, metas, produtos financeiros e regras financeiras.
 
-Essas adaptações tornam o agente mais capaz de gerar respostas personalizadas, contextualizadas e alinhadas aos objetivos financeiros dos usuários.
+Essas alterações tornaram o agente mais adaptável a diferentes usuários, permitindo recomendações personalizadas sem depender de dados previamente cadastrados.
 
 ---
 
-## Estratégia de Integração
+# Estratégia de Integração
 
-### Como os dados são carregados?
+## Como os dados são carregados?
 
-Os arquivos JSON e CSV localizados na pasta `data/` são carregados no início da execução do agente.
+Os arquivos JSON localizados na pasta `data/` são carregados no início da execução do agente.
 
-Os dados são convertidos para estruturas de dados internas (listas e dicionários) e permanecem disponíveis durante toda a sessão. Dessa forma, o agente pode consultar informações sobre perfis financeiros, metas, produtos financeiros, conceitos financeiros, regras de reserva de emergência e históricos de planejamento sempre que necessário.
+Os dados são convertidos para estruturas internas do Python (dicionários e listas) e permanecem disponíveis durante toda a sessão.
 
-### Exemplo de Carregamento da Base de Conhecimento
+Dessa forma, o agente pode consultar conceitos financeiros, metas financeiras, produtos de renda fixa e regras de reserva de emergência sempre que necessário.
+
+---
+
+## Exemplo de Carregamento da Base de Conhecimento
 
 ```python
-import json
-import pandas as pd
 
-# Arquivos JSON
-
-with open("data/perfil_usuario.json", "r", encoding="utf-8") as f:
-    perfil_usuario = json.load(f)
-
-with open("data/metas_financeiras.json", "r", encoding="utf-8") as f:
-    metas_financeiras = json.load(f)
-
-with open("data/produtos_renda_fixa.json", "r", encoding="utf-8") as f:
+with open("../data/metas_financeiras.json", "r", encoding="utf-8") as f:
     produtos_renda_fixa = json.load(f)
 
-with open("data/conceitos_financeiros.json", "r", encoding="utf-8") as f:
+with open("../data/produtos_renda_fixa.json", "r", encoding="utf-8") as f:
+    produtos_renda_fixa = json.load(f)
+
+with open("../data/conceitos_financeiros.json", "r", encoding="utf-8") as f:
     conceitos_financeiros = json.load(f)
 
-with open("data/regras_reserva_emergencia.json", "r", encoding="utf-8") as f:
+with open("../data/regras_reserva_emergencia.json", "r", encoding="utf-8") as f:
     regras_reserva = json.load(f)
 
-# Arquivos CSV
-
-historico_planejamento = pd.read_csv(
-    "data/historico_planejamento.csv"
-)
-
-gastos_mensais = pd.read_csv(
-    "data/gastos_mensais.csv"
-)
+print("Base de conhecimento carregada com sucesso!")
 
 print("Base de conhecimento carregada com sucesso!")
 ```
 
-### Como os dados são usados no prompt?
+---
 
-Os dados são consultados dinamicamente pelo SmartFinance AI durante a execução.
+## Como os dados são utilizados pelo agente?
 
-As informações mais relevantes são selecionadas e incorporadas ao contexto enviado ao modelo de IA.
+As informações da base de conhecimento são incorporadas dinamicamente ao contexto enviado ao modelo de IA.
 
-Exemplos:
+Além disso, os dados fornecidos pelo usuário durante a conversa são armazenados na memória da sessão, permitindo continuidade no atendimento.
 
-- Perfil financeiro do usuário;
-- Objetivos financeiros;
-- Gastos mensais;
-- Regras de reserva de emergência;
-- Produtos financeiros compatíveis com o perfil;
-- Conceitos financeiros necessários para responder à pergunta.
+Exemplos de informações utilizadas:
 
-Essa abordagem reduz o volume de informações enviadas ao modelo e melhora a qualidade das respostas geradas.
+* Renda mensal informada pelo usuário;
+* Despesas mensais informadas pelo usuário;
+* Valor atual da reserva de emergência;
+* Objetivos financeiros mencionados durante a conversa;
+* Conceitos financeiros necessários para responder perguntas;
+* Produtos financeiros presentes na base de conhecimento;
+* Regras de cálculo da reserva de emergência.
+
+Essa abordagem permite que o agente funcione como um assistente financeiro conversacional, mantendo contexto e evitando perguntas repetidas.
 
 ---
 
-## Exemplo de Contexto Montado
+# Exemplo de Contexto Montado
 
 ```text
-Perfil do Usuário
+DADOS FINANCEIROS DO USUÁRIO
 
-- Nome: Carlos
-- Idade: 24 anos
-- Profissão: Desenvolvedor Júnior
-- Perfil de Risco: Moderado
 - Renda Mensal: R$ 4.500
 - Despesas Mensais: R$ 2.800
+- Reserva Atual: R$ 5.000
 
-Objetivo Financeiro
+MEMÓRIA DA CONVERSA
 
-- Meta: Comprar um notebook
-- Valor da Meta: R$ 5.000
-- Prazo: 12 meses
+- Objetivo: Comprar uma moto
+- Prazo desejado: 36 meses
 
-Reserva de Emergência
+REGRAS DE RESERVA DE EMERGÊNCIA
 
-- Regra aplicada: 6 meses de despesas
-- Valor recomendado: R$ 16.800
+- Recomenda-se entre 6 e 12 meses de despesas
+- Valor mínimo sugerido: R$ 16.800
 
-Produtos Compatíveis
+PRODUTOS FINANCEIROS DISPONÍVEIS
 
 - Tesouro Selic
 - CDB com Liquidez Diária
+- LCI/LCA
 
-Instruções do Sistema
+INSTRUÇÕES DO SISTEMA
 
 - Não prometer rentabilidade.
 - Não inventar informações.
 - Priorizar educação financeira.
-- Solicitar mais contexto quando necessário.
+- Utilizar informações já fornecidas pelo usuário.
+- Solicitar apenas os dados que ainda não foram informados.
 ```
+
+---
+
+# Evolução da Arquitetura
+
+A versão inicial do projeto utilizava usuários fictícios e dados financeiros previamente cadastrados.
+
+Na versão final, o SmartFinance AI passou a utilizar:
+
+* Dados financeiros fornecidos em tempo real;
+* Memória estruturada da conversa;
+* Histórico persistente da sessão;
+* Atualização dinâmica das informações do usuário;
+* Planejamento financeiro contextualizado.
+
+Essa evolução aproximou o projeto do comportamento esperado de um agente financeiro real, capaz de acompanhar o contexto da conversa e fornecer orientações mais consistentes e personalizadas.
